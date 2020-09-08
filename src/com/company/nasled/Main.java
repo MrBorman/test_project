@@ -1,11 +1,15 @@
 package com.company.nasled;
 
 import com.company.interfaces.*;
+import com.company.callback.*;
+import com.company.Day;
+
+import java.util.Optional;
 
 public class Main {
 
     public static void main(String[] args) {
-
+    /*
         Printable.author("Sobornov Vladimir");
 
         //Преобразование типов (upcast/downcast)
@@ -65,8 +69,18 @@ public class Main {
         read(new Truck ("Mazda", 15000));
 
         Vechicle vechicle = createVechicle("Volvo",false);
-        vechicle.print();
+        vechicle.print(); */
+    /*Button button = new Button(new ButtonClickHandler());
+    button.click();
+    button.click();
+    button.click();*/
+        Day current = Day.Tuesday;
+        print(current);
 
+
+    }
+    public static void print(Day T) {
+        System.out.println(T);
     }
 
     static Vechicle createVechicle(String name, boolean isHeavy) {
