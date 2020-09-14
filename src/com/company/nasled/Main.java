@@ -1,5 +1,6 @@
 package com.company.nasled;
 
+import com.company.generics.Account;
 import com.company.interfaces.*;
 import com.company.callback.*;
 import com.company.Day;
@@ -74,13 +75,21 @@ public class Main {
     button.click();
     button.click();
     button.click();*/
-        Day current = Day.Tuesday;
-        print(current);
+    /*Day current = Day.Tuesday;
+    print(current);*/
 
+        Account<Integer> acc1 = new Account<Integer>(1,30);
+        System.out.println(acc1.getId());
+        Integer accId = acc1.getId();
+        Account<String> acc2 = new Account<String>("acc1",30);
+        System.out.println(acc2.getId());
+
+        print("String text here");
+        print(454545);
 
     }
-    public static void print(Day T) {
-        System.out.println(T);
+    public static <T> void print(T something) {
+        System.out.println(something);
     }
 
     static Vechicle createVechicle(String name, boolean isHeavy) {
