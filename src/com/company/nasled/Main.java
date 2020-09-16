@@ -1,6 +1,10 @@
 package com.company.nasled;
 
-import com.company.generics.Account;
+//import com.company.generics.Account;
+import com.company.Exception.Factorial;
+import com.company.genericRestrict.Account;
+import com.company.genericRestrict.Transaction;
+import com.company.generic_and_nasled.ForeverChild;
 import com.company.interfaces.*;
 import com.company.callback.*;
 import com.company.Day;
@@ -77,15 +81,32 @@ public class Main {
     button.click();*/
     /*Day current = Day.Tuesday;
     print(current);*/
-
-        Account<Integer> acc1 = new Account<Integer>(1,30);
-        System.out.println(acc1.getId());
-        Integer accId = acc1.getId();
-        Account<String> acc2 = new Account<String>("acc1",30);
-        System.out.println(acc2.getId());
-
+/*
         print("String text here");
         print(454545);
+
+        Account acc1 = new Account("id132",4500);
+        Account acc2 = new Account("id543",500);
+
+        Transaction<Account> trs1 = new Transaction<Account>(acc1,acc2,2000);
+
+        trs1.execute();
+
+        ForeverChild frv = new ForeverChild("\nHola hola");
+        print(frv.getId());
+
+    */
+
+        Factorial<Integer> f = new Factorial<Integer>();
+        try {
+
+            print(f.getFactorial(3));
+            print(f.getFactorial(0));
+            print(f.getFactorial(5));
+        } catch (Exception ex){
+            print(ex.getMessage());
+        }
+
 
     }
     public static <T> void print(T something) {
